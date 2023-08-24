@@ -1,13 +1,12 @@
 function divideAmount() {
     const amount = parseFloat(document.getElementById("amount").value);
-    const personal = (amount * 0.25).toFixed(2);
-    const investments = (amount * 0.15).toFixed(2);
-    const liabilities = (amount * 0.60).toFixed(2);
+    const share = (amount / 3).toFixed(2);
 
-    document.getElementById("personal").textContent = personal;
-    document.getElementById("investments").textContent = investments;
-    document.getElementById("liabilities").textContent = liabilities;
+    document.getElementById("personalShare").textContent = parseFloat(share) !== 0 ? share : "-";
+    document.getElementById("investmentsShare").textContent = parseFloat(share) !== 0 ? share : "-";
+    document.getElementById("liabilitiesShare").textContent = parseFloat(share) !== 0 ? share : "-";
 }
+
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         divideAmount();
