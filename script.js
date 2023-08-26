@@ -5,13 +5,13 @@ function handleButtonClick() {
         return;
     }
 
-    const total = Math.floor(amount * 0.3);
-    const charity = Math.floor(amount * 0.1);
-    const remainingAmount = amount - ((total + charity) * 3);
+    const share = Math.floor(amount * 0.33); 
+    const charity = Math.floor(amount * 0.01);
+    const remainingAmount = amount - ((share + charity) * 3);
 
-    document.getElementById("liabilities").textContent = total + " جنية";
-    document.getElementById("investments").textContent = total + " جنية";
-    document.getElementById("personal").textContent = total + " جنية";
+    document.getElementById("liabilities").textContent = share + " جنية";
+    document.getElementById("investments").textContent = share + " جنية";
+    document.getElementById("personal").textContent = share + " جنية";
     document.getElementById("charity").textContent = charity + " جنية";
 
     const button = document.getElementById("divideButton");
